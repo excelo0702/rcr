@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <NavbarComponent/>
       <PageDivision/>
-    </div>
+      </div>
   );
 }
 
