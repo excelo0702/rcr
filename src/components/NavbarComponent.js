@@ -1,7 +1,7 @@
 import React from 'react';
-import * as ReactBootstrap from 'react-bootstrap'
+import * as ReactBootstrap from 'react-bootstrap';
 
-function NavbarComponent(){
+const NavbarComponent = ()=>{
     return(
         <ReactBootstrap.Navbar bg="light" expand="lg">
   <ReactBootstrap.Navbar.Brand href="#home">React-Bootstrap</ReactBootstrap.Navbar.Brand>
