@@ -14,9 +14,10 @@ const NavbarComponent = () => {
         <ReactBootstrap.Nav className="mr-auto">
           {/* <ReactBootstrap.Nav.Link to="/home">Home</ReactBootstrap.Nav.Link> */}
           <NavLink to="/home">Home</NavLink>
-          <ReactBootstrap.Nav.Link href="#link">
+          <NavLink to="/findComponents">Find Components</NavLink>
+          {/* <ReactBootstrap.Nav.Link href="#link">
             Find Components
-          </ReactBootstrap.Nav.Link>
+          </ReactBootstrap.Nav.Link> */}
           <NavLink to="/insert">Insert</NavLink>
           {/* <ReactBootstrap.Nav.Link to="/insert">Insert</ReactBootstrap.Nav.Link> */}
         </ReactBootstrap.Nav>

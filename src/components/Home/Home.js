@@ -1,7 +1,9 @@
 import React from "react";
 
-function Home() {
-  return <div>HOME PAGE</div>;
+class Home extends React.Component {
+  render() {
+    return <div>Home</div>;
+  }
 }
 
 export default Home;
