@@ -1,19 +1,45 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { Button } from 'react-bootstrap';
 import RightPageCard from './rightPageCard';
+import axios from 'axios';
+import SearchBox from './SearchBox';
 
-function rightPage(){
+class rightPage extends Component{
+
+    state = {
+        Cards: [],
+        todos:[],
+        searchField:50
+    }
+
+    componentDidMount(){
+        axios.get(`https://jsonplaceholder.typicode.com/todos/`)
+        .then(res => {
+            console.log(res);
+            this.setState({todos:res.data})
+        });
+    }
+
+    
+
+    handleChange = (e) =>{
+        this.setState({searchField:e.target.value})
+        console.log(e.target.value);
+      }
+
+    render(){
+        
+
+
     return(
         <div>
-        
-                <input placeholder="Search Bar" style={{maxWidth:'700px', width:'700px', margin:'10px 150px 10px 10px'}} />
-            <RightPageCard/>
-            <RightPageCard/>
-            <RightPageCard/>
-            <RightPageCard/>
-            <RightPageCard/>
-            <RightPageCard/>
+            <SearchBox placeholder="Enter Product name ..." handleChange={this.handleChange}/>
+            {this.state.todos.map(todos => todos.id<this.state.searchField ? <RightPageCard title={todos.title} body={todos.userId}/>:null)}
+
+
         </div>
     );
+    }
 }
 
 export default rightPage;
