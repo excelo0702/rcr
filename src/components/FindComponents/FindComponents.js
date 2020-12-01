@@ -95,6 +95,7 @@ export default class FindComponents extends Component {
   render() {
     return (
       <div>
+        <NavbarComponent/>
         <PageDivision
           searchComponentsHandler = {() => this.searchComponentsHandler()}
           components={this.state.SearchedComponents}

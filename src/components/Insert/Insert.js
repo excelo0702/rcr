@@ -37,6 +37,7 @@ class Insert extends Component {
   render() {
     return (
       <Auxx>
+        <NavbarComponent/>
         <div className="container">
           <form onSubmit={this.handleSubmit}>
             <label>First Name</label>

@@ -5,8 +5,8 @@ import Home from "../Home/Home";
 import Insert from "../Insert/Insert";
 import FindComponents from "../FindComponents/FindComponents";
 import {firebase_var} from "../../config/firebaseConfig";
-import Login from '../Authentication/Login'
-import NavbarComponent from './NavbarComponent'
+import Login from '../Authentication/Login';
+import ComponentDetail from '../Cards/ComponentDetail';
 
 class Layout extends Component {
 
@@ -36,12 +36,14 @@ class Layout extends Component {
   render() {
     return (
       <Auxx>
-        {this.state.user?<NavbarComponent/>:<Login/>}
+        <ComponentDetail/>
         <Switch>
+
           <Route path="/insert" component={() => <Insert />} />
           <Route path="/home" component={() => <Home />} />
           <Route path="/findComponents" component={() => <FindComponents />} />
           <Route path="/Login" component={()=><Login/>}/>
+          <Route path="/componentDetail" component={()=><ComponentDetail/>}/>
         </Switch>
       </Auxx>
     );

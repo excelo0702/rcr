@@ -1,7 +1,7 @@
 import React from "react";
 import Auxx from '../hoc/Auxx'
 import {firebase_var} from "../../config/firebaseConfig";
-
+import NavbarComponent from '../Layout/NavbarComponent';
 
 class Home extends React.Component {
   render() {
@@ -13,6 +13,7 @@ class Home extends React.Component {
     })
     return(
       <Auxx>
+        <NavbarComponent/>
         <p>Home</p>
       </Auxx>
     ) 

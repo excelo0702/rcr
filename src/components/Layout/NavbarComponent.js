@@ -2,12 +2,14 @@ import React,{Component} from "react";
 import { NavLink } from "react-router-dom";
 import * as ReactBootstrap from "react-bootstrap";
 import {firebase_var} from '../../config/firebaseConfig'
+import history from '../../history';
 
 class NavbarComponent extends Component{
 
 
   handleLogout= ()=>{
     firebase_var.auth().signOut();
+    history.push('/Login');
   }
 
   render(){

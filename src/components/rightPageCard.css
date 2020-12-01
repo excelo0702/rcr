@@ -1,0 +1,9 @@
+.card{
+    cursor: pointer;
+    margin: 50px;
+    padding: 20px;
+}
+
+.card:hover{
+    margin:45px;
+}

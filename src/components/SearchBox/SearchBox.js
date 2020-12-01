@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import './SearchBox.css'
-import firebase from 'firebase';
 
 class SearchBox extends Component{
-    constructor(props){
-        super(props);
-    }
 
 
     render(){
