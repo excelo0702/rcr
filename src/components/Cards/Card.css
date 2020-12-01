@@ -1,0 +1,28 @@
+.card{
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);
+    width: 800px;
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+.container{
+    padding: 2px 16px;
+}
+
+.img-container{
+    width: 130px;
+    height: 130px;
+    float: left;
+    margin: 15px;
+}
+
+@media (min-width:500px){
+    card{
+        
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2);
+    max-width: 100px;
+    padding: 10px;
+    margin: 20px;
+    }
+}

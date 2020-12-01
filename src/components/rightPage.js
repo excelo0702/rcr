@@ -1,38 +1,33 @@
 import React from "react";
-import RightPageCard from "./rightPageCard";
+import RightPageCard from "./Cards/rightPageCard";
+import SearchBox from './SearchBox/SearchBox';
 
 const rightPage = (props) => {
   let components = props.components.map((component) => {
     return (
       <RightPageCard
         key={component.id}
-        id={component.id}
+        id={component.albumId}
         techType={component.techType}
-        componentFunction={component.componentFunction}
-        name={component.name}
+        componentFunction={component.title}
+        name={component.title}
+        url={component.url}
+      
       />
     );
   });
-
-  return (
+  
+  return(
     <div>
-      <input
-        placeholder="Search Bar"
-        style={{
-          maxWidth: "700px",
-          width: "700px",
-          margin: "10px 150px 10px 10px",
-        }}
-      />
-      {components}
-      {/* <RightPageCard />
-      <RightPageCard />
-      <RightPageCard />
-      <RightPageCard />
-      <RightPageCard />
-      <RightPageCard /> */}
+    <SearchBox 
+      onChangeHandler={props.searchBoxChangeHandler}
+      onSubmitHandler={props.searchBoxOnSubmitHandler}
+    />
+    {components}
     </div>
-  );
+    
+    )
+
 };
 
 export default rightPage;
