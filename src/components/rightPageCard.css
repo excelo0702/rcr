@@ -7,3 +7,8 @@
 .card:hover{
     margin:45px;
 }
+
+.imgContainer{
+    width: 100px;
+    height: 100px;
+}

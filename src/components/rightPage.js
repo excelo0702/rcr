@@ -1,6 +1,7 @@
 import React from "react";
 import RightPageCard from "./Cards/rightPageCard";
 import SearchBox from './SearchBox/SearchBox';
+import {Row} from 'react-bootstrap'
 
 const rightPage = (props) => {
   let components = props.components.map((component) => {
@@ -25,6 +26,7 @@ const rightPage = (props) => {
     />
     {components}
     </div>
+
     
     )
 

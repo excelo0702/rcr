@@ -36,7 +36,6 @@ class Layout extends Component {
   render() {
     return (
       <Auxx>
-        <ComponentDetail/>
         <Switch>
 
           <Route path="/insert" component={() => <Insert />} />
